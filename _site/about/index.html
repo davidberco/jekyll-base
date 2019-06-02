@@ -12,7 +12,8 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://localhost:4000/about/">
-  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://localhost:4000/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="This one!" href="http://localhost:4000/feed.xml" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 
@@ -22,7 +23,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Your awesome title</a>
+    <a class="site-title" href="/">This one!</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -79,12 +80,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Your awesome title</h2>
+    <h2 class="footer-heading">This one!</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>Your awesome title</li>
+          <li>This one!</li>
           <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
         </ul>
       </div>
@@ -129,7 +130,17 @@
     </div>
 
   </div>
-
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </footer>
 
 
