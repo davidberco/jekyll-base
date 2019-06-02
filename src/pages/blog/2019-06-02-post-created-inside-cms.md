@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Post created inside CMS
+title: Post 1 created inside CMS
 date: 2019-05-31T23:19:49.442Z
 description: here is a description of the post
 featuredpost: true
